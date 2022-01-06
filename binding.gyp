@@ -14,8 +14,8 @@
       ],
       'link_settings': {
         'libraries': [
-          '-lgphoto2',
-          '-lgphoto2_port'
+          '<!(/opt/local/bin/pkg-config --libs libgphoto2)',
+          '<!(/opt/local/bin/pkg-config --libs libgphoto2_port)'
         ]
       },
       'cflags': [
@@ -31,7 +31,8 @@
             'GCC_ENABLE_CPP_EXCEPTIONS': 'YES',
             'OTHER_CPLUSPLUSFLAGS' : [
               '-std=c++11',
-              '-stdlib=libc++'
+              '-stdlib=libc++',
+              '<!(/opt/local/bin/pkg-config --cflags libgphoto2)'
             ]
           }
         }]
