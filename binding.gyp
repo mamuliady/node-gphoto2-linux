@@ -24,7 +24,7 @@
       'cflags!': [
         '-fno-exceptions'
       ],
-      'target_arch': 'x64',
+      'target_arch': 'arm',
       'conditions': [
         ['OS=="mac"', {
           'xcode_settings': {
@@ -32,7 +32,7 @@
             'OTHER_CPLUSPLUSFLAGS' : [
               '-std=c++11',
               '-stdlib=libc++',
-              '<!(/opt/homebrew/bin/pkg-config --cflags libgphoto2)'
+              '<!(/opt/homebrew/bin/pkg-config --cflags libgphoto2)',
             ]
           }
         }]
