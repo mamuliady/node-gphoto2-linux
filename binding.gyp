@@ -3,7 +3,8 @@
     {
       'target_name': 'gphoto2',
       'include_dirs': [
-        "<!(node -e \"require('nan')\")"
+        "<!(node -e \"require('nan')\")",
+
       ],
       'sources': [
         'src/autodetect.cc',
@@ -14,12 +15,12 @@
       ],
       'link_settings': {
         'libraries': [
-          '<!(/opt/local/bin/pkg-config --libs libgphoto2)',
-          '<!(/opt/local/bin/pkg-config --libs libgphoto2_port)'
+          '<!(/opt/homebrew/bin/pkg-config --libs libgphoto2)',
+          '<!(/opt/homebrew/bin/pkg-config --libs libgphoto2_port)'
         ]
       },
       'cflags': [
-        '--std=c++14'
+        '--std=c++11'
       ],
       'cflags!': [
         '-fno-exceptions'
@@ -32,7 +33,7 @@
             'OTHER_CPLUSPLUSFLAGS' : [
               '-std=c++11',
               '-stdlib=libc++',
-              '<!(/opt/local/bin/pkg-config --cflags libgphoto2)'
+              '<!(/opt/homebrew/bin/pkg-config --cflags libgphoto2)'
             ]
           }
         }]
