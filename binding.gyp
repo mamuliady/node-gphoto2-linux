@@ -14,8 +14,8 @@
       ],
       'link_settings': {
         'libraries': [
-          '<!(/opt/homebrew/bin/pkg-config --libs libgphoto2)',
-          '<!(/opt/homebrew/bin/pkg-config --libs libgphoto2_port)'
+          '-lgphoto2',
+          '-lgphoto2_port'
         ]
       },
       'cflags': [
